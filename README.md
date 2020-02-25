@@ -18,7 +18,7 @@ A binary tree is stored in a vector in breadth-first order. That is, starting wi
  
  While building a tree, if there is an odd number of nodes at the given level, the last node will be duplicated. Otherwise, the tree won't be complete. And we need it to be complete in order to "2i 2i+1" schema to work.
  
- ###Usage
+ ### Usage
  
  Let's say you have a file. You split it into 100 blocks and build a tree.
  
