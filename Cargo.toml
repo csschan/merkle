@@ -1,0 +1,16 @@
+[package]
+name = "merkle"
+version = "0.1.0"
+authors = ["root1234"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clippy = {version = "*", optional = true}
+rust-crypto = "^0.2"
+rustc-serialize = "0.3"
+
+[features]
+default = []
+dev=["clippy"]
