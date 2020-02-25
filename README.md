@@ -1,6 +1,6 @@
 # Merkle Tree implemented
 
-###Storage format
+### Storage format
 
 A binary tree is stored in a vector in breadth-first order. That is, starting with the root we go from left to right at every level.
 
@@ -61,9 +61,9 @@ assert!(t.verify(block_index, &block));
 
 where block_index - index of a block (starts at 0).
 
-##Decision log
+## Decision log
 
-##Why binary tree?
+## Why binary tree?
 
 None of the sources say anything about the number of children each node could have. The usual choice is 2. So, we need to know only the hash of our neighbor to check the subtree. We go all the way up to the root node. At each level, we only need to know the hash of our neighbor to the right (or left). This is of course if you want to check log(N) hashes on a path to root.
 ```
@@ -71,7 +71,7 @@ None of the sources say anything about the number of children each node could ha
   2   3
 ```
 
-###Why tree is stored in a vector?
+### Why tree is stored in a vector?
 
 I've tried different solutions. At the end of the first day I had a standard binary tree (tag: 0.1.0).
 
@@ -123,9 +123,9 @@ Deal with "rust cannot infer type for _" (let _t: MerkleTree).
 Serialization/deserialization in a separate module.
 User-friendly interface for traversing a tree (root().left().right()) - Builder pattern.
 
-###Development
+### Development
 
-####Step 1. Create development environment
+#### Step 1. Create development environment
 You will need docker engine if you want to develop this library inside a container. If you already have rust on your computer and fine with downloading some dependencies, feel free to skip this step.
 
 ```
@@ -133,13 +133,13 @@ $ make create_dev_env
 $ make run_shell
 ```
 
-Step 2. Build & test
+#### Step 2. Build & test
 
 ```
 $ cargo build --features "dev"
 $ cargo test
 ```
-Step 3. Benchmark
+#### Step 3. Benchmark
 
 ```
 $ cargo bench --features "dev"
